@@ -1,0 +1,63 @@
+// Estilos generales
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navb {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu .item {
+  margin-right: 20px;
+}
+
+.menu .link {
+  color: #fff;
+  text-decoration: none;
+}
+
+// Estilos para dispositivos móviles
+@media (max-width: 768px) {
+  .menu {
+    display: none; // Oculta el menú en dispositivos móviles
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .menuVisible {
+    display: block; // Muestra el menú cuando está activo
+  }
+
+  .menu .item {
+    margin: 10px 0;
+  }
+
+  .btMenu {
+    display: block;
+  }
+}
+
+// Estilos para dispositivos de escritorio
+@media (min-width: 769px) {
+  .btMenu {
+    display: none; // Oculta el botón del menú en dispositivos de escritorio
+  }
+}
